@@ -7,6 +7,11 @@ void setup(void) {
     digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
     digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
     digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
+
+    Serial.begin(9600);
+    while (!Serial);
+    Serial.println("hoosgow.");
+
     // result: pending testing.
 }
 
