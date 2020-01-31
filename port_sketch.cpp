@@ -13,6 +13,9 @@ volatile REGTYPE *mode13;
 volatile REGTYPE *out13;
 
 void setup(void) {
+    pin13 = digitalPinToBitMask(13);
+    mode13 = portModeRegister(digitalPinToPort(13));
+    out13 = portOutputRegister(digitalPinToPort(13));
 
     Serial.begin(9600);
     while (!Serial);
