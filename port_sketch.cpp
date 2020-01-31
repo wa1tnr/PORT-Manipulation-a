@@ -22,7 +22,12 @@ void setup(void) {
 
     Serial.begin(9600);
     while (!Serial);
-    Serial.println("hoosgow. cfba9");
+    Serial.println("hoosgow. dcbe2");
+
+    // test payload, old method:
+    for (int i = 3; i>0; i--) {
+        digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
+    }
 }
 
 void loop(void) { }
