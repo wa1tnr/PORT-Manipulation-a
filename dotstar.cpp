@@ -57,17 +57,17 @@ void setup_dotstar(void) {
   strip.show();  // Turn all LEDs off ASAP
 }
 
-uint16_t red = 0, green = 0, blue = 0;
+uint16_t green = 0, red = 0, blue = 0;
 
 void clear_dotStarColors(void) {
-  red = 0; green = 0; blue = 0; // black/no colors/no light at all
-  strip.setPixelColor(0, blue, red, green); // Set the pixel colors
+  green = 0; red = 0; blue = 0; // black/no colors/no light at all
+  strip.setPixelColor(0, green, red, blue); // Set the pixel colors
   strip.show();              // Refresh strip
 }
 
 void set_dotStarColors(void) {
-  red = 0; green = 22; blue = 22; // cyan
-  strip.setPixelColor(0, blue, red, green);
+  green = 22; red = 0; blue = 22; // cyan
+  strip.setPixelColor(0, green, red, blue); // bugfix tnr 31 Jan 2020
   strip.show();
 }
 

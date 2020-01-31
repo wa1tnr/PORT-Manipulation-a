@@ -2,6 +2,8 @@
 // Fri Jan 31 02:23:38 UTC 2020
 // Fri Jan 31 00:40:53 UTC 2020
 
+// bugfix grb is the correct order
+
 // has dotstar support
 
 // schematic, Adafruit ItsyBitsyM4 (target):
