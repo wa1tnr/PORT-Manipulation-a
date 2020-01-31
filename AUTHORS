@@ -1,0 +1,15 @@
+
+cmaglie
+avatar_cmaglie
+*****
+Forum Administrator
+Sr. Member
+Posts: 421
+Karma: 72  [add]
+http://bug.st/
+
+Re: Faster Pin I/O on Zero?
+#6
+Jul 08, 2015, 06:55 pm 
+Another solution is to use the variant macros to access GPIO registers:
+
