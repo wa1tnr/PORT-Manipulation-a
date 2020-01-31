@@ -17,6 +17,9 @@ void setup(void) {
     mode13 = portModeRegister(digitalPinToPort(13));
     out13 = portOutputRegister(digitalPinToPort(13));
 
+    // set pin 13 port as output
+    *mode13 |= pin13;
+
     Serial.begin(9600);
     while (!Serial);
     Serial.println("hoosgow. cfba9");
