@@ -4,7 +4,7 @@ void setup(void) {
 
     Serial.begin(9600);
     while (!Serial);
-    Serial.println("hoosgow.");
+    Serial.println("hoosgow. cfba9");
 
     // PA22: D13
     pinMode(13, 1); // DDRD = B11111110;  // sets Arduino pins 1 to 7 as outputs, pin 0 as input
@@ -13,7 +13,7 @@ void setup(void) {
     digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
     digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
 
-    // result: pending testing.
+    // result: good test - waits for serial, blinks.  Fri Jan 31 01:30:54 UTC 2020
 }
 
 /* discussion:
