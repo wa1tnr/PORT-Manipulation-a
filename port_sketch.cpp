@@ -1,33 +1,12 @@
 #include <Arduino.h>
 
+// https://forum.arduino.cc/index.php?topic=334073.0
+
 void setup(void) {
 
     Serial.begin(9600);
     while (!Serial);
     Serial.println("hoosgow. cfba9");
-
-    // PA22: D13
-    pinMode(13, 1); // DDRD = B11111110;  // sets Arduino pins 1 to 7 as outputs, pin 0 as input
-    digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
-    digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
-    digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
-    digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
-
-    // result: good test - waits for serial, blinks.  Fri Jan 31 01:30:54 UTC 2020
 }
 
-/* discussion:
-
-  DDRD would be DDRA.
-  PA22 would be 22 decimal or 21 decimal (zero-ref'd).
-  That's a lot of bits.
-
-  'ag DDRB' in avr shows pins_arduino.h defining.
-
-  No hits in samd.
-
-  Conclusion: not supported.
-
-*/
-
-void  loop(void) { }
+void loop(void) { }
