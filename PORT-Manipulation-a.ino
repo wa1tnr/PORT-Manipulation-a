@@ -1,5 +1,8 @@
+// Fri Jan 31 02:43:20 UTC 2020
 // Fri Jan 31 02:23:38 UTC 2020
 // Fri Jan 31 00:40:53 UTC 2020
+
+// has dotstar support
 
 // schematic, Adafruit ItsyBitsyM4 (target):
 // https://learn.adafruit.com/assets/55481
