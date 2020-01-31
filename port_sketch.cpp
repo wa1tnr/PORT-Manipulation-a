@@ -22,7 +22,8 @@ void setup(void) {
 
     Serial.begin(9600);
     while (!Serial);
-    Serial.println("hoosgow. dcbe2");
+    delay(700); // a bit of relief
+    Serial.println("Ready when you are.");
 
     // test payload, old method:
     // for (int i = 3; i>0; i--) {
@@ -30,4 +31,15 @@ void setup(void) {
     // }
 }
 
-void loop(void) { }
+void loop(void) {
+    // blink pin 13
+    *out13 |= pin13;
+    delay(500);
+    *out13 &= ~pin13;
+    delay(500);
+}
+
+/*
+     This way you don't need to know the details of the
+     underlying abstraction layer used to define pins.
+*/
