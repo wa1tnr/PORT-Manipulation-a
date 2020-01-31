@@ -32,11 +32,6 @@ void setup(void) {
     while (!Serial) waitfor();
     delay(700); // a bit of relief
     Serial.println("Ready when you are.");
-
-    // test payload, old method:
-    // for (int i = 3; i>0; i--) {
-        // digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
-    // }
 }
 
 void loop(void) {
