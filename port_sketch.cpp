@@ -1,5 +1,12 @@
 #include <Arduino.h>
 
+#include "compatibility.h"
+
+#ifdef HAS_DOTSTAR_LIB
+extern void setup_dotstar(void); // dotstar.cpp
+extern void set_dotStarColors(void);
+#endif // #ifdef HAS_DOTSTAR_LIB
+
 // https://forum.arduino.cc/index.php?topic=334073.0
 
 #ifdef ARDUINO_ARCH_AVR
@@ -21,6 +28,9 @@ void waitfor(void) {
 }
 
 void setup(void) {
+
+    setup_dotstar(); set_dotStarColors();
+
     pin13 = digitalPinToBitMask(13);
     mode13 = portModeRegister(digitalPinToPort(13));
     out13 = portOutputRegister(digitalPinToPort(13));
