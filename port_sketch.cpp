@@ -1,16 +1,17 @@
 #include <Arduino.h>
 
 void setup(void) {
+
+    Serial.begin(9600);
+    while (!Serial);
+    Serial.println("hoosgow.");
+
     // PA22: D13
     pinMode(13, 1); // DDRD = B11111110;  // sets Arduino pins 1 to 7 as outputs, pin 0 as input
     digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
     digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
     digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
     digitalWrite(13,1); delay(500); digitalWrite(13,0); delay(500);
-
-    Serial.begin(9600);
-    while (!Serial);
-    Serial.println("hoosgow.");
 
     // result: pending testing.
 }
