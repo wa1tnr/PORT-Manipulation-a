@@ -12,6 +12,14 @@ REGTYPE pin13;
 volatile REGTYPE *mode13;
 volatile REGTYPE *out13;
 
+void waitfor(void) {
+    // blink pin 13
+    *out13 |= pin13;
+    delay(4);
+    *out13 &= ~pin13;
+    delay(3500);
+}
+
 void setup(void) {
     pin13 = digitalPinToBitMask(13);
     mode13 = portModeRegister(digitalPinToPort(13));
@@ -21,7 +29,7 @@ void setup(void) {
     *mode13 |= pin13;
 
     Serial.begin(9600);
-    while (!Serial);
+    while (!Serial) waitfor();
     delay(700); // a bit of relief
     Serial.println("Ready when you are.");
 
@@ -32,11 +40,10 @@ void setup(void) {
 }
 
 void loop(void) {
-    // blink pin 13
     *out13 |= pin13;
-    delay(500);
+    delay(900);
     *out13 &= ~pin13;
-    delay(500);
+    delay(1200);
 }
 
 /*
